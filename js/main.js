@@ -11,26 +11,37 @@ const notif = document.querySelector(".notif");
 const person = document.querySelectorAll(".person");
 const massageNotif = document.querySelectorAll(".notif_massage");
 const massage = document.querySelectorAll(".massage");
-const tool = document.querySelector(".tool")
+const tool = document.querySelector(".tool");
+const me = document.querySelector(".me");
+const back = document.querySelector(".back");
+const backMassage = document.querySelector("#back_massage");
+const nextMassage = document.querySelector("#next_massage");
 
 // function display & text
 const forDisplay = (text, display) => {
-    headerRight.style.display = display;
-    notif.style.display = display;
-    tool.style.display = display;
+    headerRight.style.display =display;
+    tool.style.display =display;
+    me.style.display =display;
 }
 
 // function loop menu
-const forLoop = (display, classL, text) => {
+const forLoop = (display,text) => {
     for (let i = 0; i < navInfo.length; i++) {
         navInfo[i].style.display = display;
-    }
-    for (let i = 0; i < menuItem.length; i++) {
-        menuItem[i].classList.add(classL);
     }
     for (let i = 0; i < menu.length; i++) {
         menu[i].style.textAlign =text;
     }
+    for (let i = 0; i < person.length; i++) {
+        person[i].style.display = display;
+    }
+    for (let i = 0; i < massageNotif.length; i++) {
+        massageNotif[i].style.display = display;
+    }
+    for (let i = 0; i < massage.length; i++) {
+        massage[i].style.justifyContent = text;
+    }
+    notif.style.display =display;
 }
 
 // function width
@@ -40,20 +51,28 @@ const forWidth = (section, head) => {
 }
 
 
-// trigger 
+// trigger 1
 roundBtn.addEventListener('click', () => {
     console.log('tombol di klik mang');
+    back.style.display ="block";
+    roundBtn.style.display ="none";
     forWidth("5.5rem","100%");
-    forLoop("none", "respon", "center");
+    forLoop("none","center");
     forDisplay("center", "none");
-    for (let i = 0; i < person.length; i++) {
-        person[i].style.display = "none";
+    for (let i = 0; i < menuItem.length; i++) {
+        menuItem[i].classList.add("respon");
     }
-    for (let i = 0; i < massageNotif.length; i++) {
-        massageNotif[i].style.display = "none";
-    }
-    for (let i = 0; i < massage.length; i++) {
-        massage[i].style.justifyContent = "center";
+})
+
+// trigger back 
+back.addEventListener("click", () => {
+    back.style.display ="none";
+    roundBtn.style.display ="block";
+    forWidth("16rem","50%");
+    forLoop("flex",null);
+    forDisplay(null, "block");
+    for (let i = 0; i < menuItem.length; i++) {
+        menuItem[i].classList.remove("respon");
     }
 })
 
@@ -66,3 +85,20 @@ for (let i = 0; i < menuLink.length; i++) {
         this.className += " active";
     });
 }
+
+// massage click 
+for (let i = 0; i < massage.length; i++) {
+    massage[i].addEventListener("click", function() {
+        alert("isi sendiri ah cape :( ")
+    });
+}
+
+
+// back and next massage 
+backMassage.addEventListener("click", () => {
+    alert("isi sendiri ya capeeeeeee :( ")
+});
+
+nextMassage.addEventListener("click", () => {
+    alert("sorry next, swipe, swipe, swipe")
+})

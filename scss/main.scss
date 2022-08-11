@@ -18,12 +18,23 @@ $btnColor: rgba(255, 255, 255, 0.47);
 
 @mixin headText {
     color: $textColor;
-    font-weight: 300;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 3;
     cursor: pointer;
     text-transform: uppercase;
 }
 
+@mixin roundBtn {
+    width: 30px;
+    height: 30px;
+    background-color: $btnColor;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right ;
+    cursor: pointer;
+    margin-right: 1.2em;
+}
 
 // style
 * {
@@ -36,6 +47,7 @@ body {
     background-image: url("../img/iuu.jpg");
     background-size: cover;
     background-position: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     .nav_section {
         width: 16rem;
         height: 100vh;
@@ -71,16 +83,8 @@ body {
             .header_right {
                 width: 50%;
                 .round_btn {
-                    width: 30px;
-                    height: 30px;
-                    background-color: $btnColor;
-                    border-radius: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    float: right ;
-                    cursor: pointer;
-                    margin-right: 1.2em;
+                    @include roundBtn();
+                    margin: auto;
                 }
                 i {
                     padding: 2px;
@@ -102,7 +106,6 @@ body {
             h6 {
                 padding-left: 1rem;
                 font-weight: 500;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 cursor: pointer;
             }
         }
@@ -118,7 +121,6 @@ body {
                 height: 100%;
                 list-style-type: none;
                 padding-left: 0;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 .respon {
                     display: flex;
                     justify-content: center;
@@ -184,7 +186,8 @@ body {
                     font-size: 0.9rem;
                 }
                 .tool {
-                    margin-left: 6.8rem;
+                    margin-left: auto;
+                    
                     i {
                         cursor: pointer;
                         &:hover {
@@ -203,6 +206,7 @@ body {
                     display: flex;
                     align-items: center;
                     margin-bottom: 00.5em;
+                    cursor: pointer;
                     img {
                         width: 40px;
                         height: 40px;
@@ -212,7 +216,6 @@ body {
                     }
                     i {
                         margin-left: 1.2em;
-                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                         font-size: small;
                         font-weight: 300;
                         color: $black;
@@ -235,6 +238,44 @@ body {
             @media screen and(max-width:560px) {
                 margin-top: 1rem;
             }
+        }
+        .nav_footer {
+            width: 100%;
+            height:auto;
+            margin-top: 0.5em;
+            .footer {
+                display: flex;
+                .me_img {
+                    width: 63px;
+                    height: 63px;
+                    border-radius: 100%;
+                }
+                .me {
+                    margin: auto;
+                    margin-left: 1.2em;
+                    .me_name {
+                        margin: 0;
+                        font-weight: 500;
+                        font-size: medium;
+                        color: $black;
+                    }
+                    .me_position {
+                        margin: 0;
+                        font-weight: 400;
+                        font-size: medium;
+                        color: $btnColor;
+                    }
+                }
+            }
+        }
+    }
+    .back_tool {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .back {
+            display: none;
+            transition: all .1s ease-in;
         }
     }
 }
