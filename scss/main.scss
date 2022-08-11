@@ -1,0 +1,86 @@
+$red :#ff0000;
+$yellow:#fbff00;
+$green:#2de200;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-image: url("../img/iuu.jpg");
+    background-size: cover;
+    background-position: center;
+    .nav_section {
+        width: 16rem;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.496);
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+        z-index: -100;
+        overflow: hidden;
+        .nav_header{
+            height: 4rem;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .header_left{
+                width: 50%;
+                display: flex;
+                gap: 0.4rem;
+                .round {
+                    width: 16px;
+                    height: 16px;
+                    background:$red;
+                    border-radius: 100%;
+                }
+                .round:nth-child(2){
+                    background: $yellow;
+                }
+                .round:nth-child(3){
+                    background: $green;
+                }
+            }
+            .header_right {
+                width: 50%;
+                .round_btn {
+                    width: 30px;
+                    height: 30px;
+                    background-color: rgba(255, 255, 255, 0.47);
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    float: right ;
+                    cursor: pointer;
+                    margin-right: 1.2em;
+                }
+                i {
+                    padding: 2px;
+                }
+            }
+        }
+        .nav_main {
+            width: 100%;
+            height: 4rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            img {
+                width: 63px;
+                height: 63px;
+                border-radius: 100%;
+                align-items: center;
+            }
+            h6 {
+                font-weight: 500;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
