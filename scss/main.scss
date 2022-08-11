@@ -1,8 +1,18 @@
+
+// variabel
 $red :#ff0000;
 $yellow:#fbff00;
 $green:#2de200;
+$textColor: rgb(99, 99, 99);
+$black: rgb(0, 0, 0);
 
 
+// mixin
+@mixin myDisplay {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
 * {
     margin: 0;
@@ -22,6 +32,7 @@ body {
         border-radius: 10px;
         z-index: -100;
         overflow: hidden;
+        transition: width .1s ease;
         .nav_header{
             height: 4rem;
             width: 100%;
@@ -77,9 +88,68 @@ body {
                 align-items: center;
             }
             h6 {
+                padding-left: 1rem;
                 font-weight: 500;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                padding-left: 1rem;
+                cursor: pointer;
+            }
+        }
+        .nav_menu {
+            width: 100%;
+            height: 45vh;
+            margin-top: 0.5em;
+            .menu {
+                color: $textColor;
+                font-weight: 300;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+            .menu_list {
+                width: 100%;
+                height: 100%;
+                list-style-type: none;
+                padding-left: 0;
+                .respon {
+                    display: flex;
+                    justify-content: center;
+                }
+                .menu_item {
+                    margin-top: 0.5em;
+                    height: 2rem;
+                    .menu_link {
+                        text-decoration: none;
+                        color: $textColor;
+                        @include myDisplay();
+                        .icon {
+                            @include myDisplay();
+                            justify-content: center;
+                        }
+                        .nav_info {
+                            @include myDisplay();
+                            padding-left: 1.3rem;
+                        }
+                        .notif {
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            margin-left: 8rem;
+                            background-color: #0055ff;
+                            i {
+                                color: white;
+                                font-size: small;
+                            }
+                        }
+                    }
+                    .active {
+                        color: $black;
+                        font-weight: 700;
+                        font-size: medium;
+                    }
+                }
             }
         }
     }
