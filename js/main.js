@@ -8,19 +8,34 @@ const menu = document.querySelector(".menu");
 const menuItem = document.querySelectorAll(".menu_item");
 const notif = document.querySelector(".notif");
 
+// function display & text
+const forDisplay = (text, display) => {
+    headerRight.style.display = display;
+    notif.style.display = display;
+    menu.style.textAlign = text;
+}
 
-roundBtn.addEventListener('click', () => {
-    console.log('tombol di klik mang');
-    navSection.style.width = "5.5rem";
-    headerRight.style.display = "none";
-    headerLeft.style.width = "100%";
+// function loop menu
+const forLoop = (display, classL) => {
     for (let i = 0; i < navInfo.length; i++) {
-        navInfo[i].style.display = "none";
+        navInfo[i].style.display = display;
     }
     for (let i = 0; i < menuItem.length; i++) {
-        menuItem[i].classList.add("respon");
+        menuItem[i].classList.add(classL);
     }
-    notif.style.display = "none";
+}
 
-    menu.style.textAlign = "center";
+// function width
+const forWidth = (section, head) => {
+    navSection.style.width = section;
+    headerLeft.style.width = head;
+}
+
+
+// trigger 
+roundBtn.addEventListener('click', () => {
+    console.log('tombol di klik mang');
+    forWidth("5.5rem","100%");
+    forLoop("none", "respon");
+    forDisplay("center", "none");
 })

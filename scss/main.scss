@@ -4,7 +4,7 @@ $red :#ff0000;
 $yellow:#fbff00;
 $green:#2de200;
 $textColor: rgb(99, 99, 99);
-$black: rgb(0, 0, 0);
+$black: rgb(35, 34, 34);
 
 
 // mixin
@@ -146,7 +146,7 @@ body {
                     }
                     .active {
                         color: $black;
-                        font-weight: 700;
+                        font-weight: 800;
                         font-size: medium;
                     }
                 }
