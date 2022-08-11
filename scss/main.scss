@@ -5,6 +5,8 @@ $yellow:#fbff00;
 $green:#2de200;
 $textColor: rgb(114, 114, 114);
 $black: rgb(35, 34, 34);
+$bgColor:  rgba(255, 255, 255, 0.496);
+$btnColor: rgba(255, 255, 255, 0.47);
 
 
 // mixin
@@ -14,6 +16,16 @@ $black: rgb(35, 34, 34);
     align-items: center;
 }
 
+@mixin headText {
+    color: $textColor;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+// style
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +39,7 @@ body {
     .nav_section {
         width: 16rem;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.496);
+        background-color: $bgColor;
         backdrop-filter: blur(3px);
         border-radius: 10px;
         z-index: -100;
@@ -61,7 +73,7 @@ body {
                 .round_btn {
                     width: 30px;
                     height: 30px;
-                    background-color: rgba(255, 255, 255, 0.47);
+                    background-color: $btnColor;
                     border-radius: 100%;
                     display: flex;
                     justify-content: center;
@@ -96,20 +108,17 @@ body {
         }
         .nav_menu {
             width: 100%;
-            height: 45vh;
+            height: 36vh;
             margin-top: 0.5em;
-            .menu {
-                color: $textColor;
-                font-weight: 300;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                cursor: pointer;
-                text-transform: uppercase;
+            .head_text {
+                @include headText();
             }
             .menu_list {
                 width: 100%;
                 height: 100%;
                 list-style-type: none;
                 padding-left: 0;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 .respon {
                     display: flex;
                     justify-content: center;
@@ -139,6 +148,8 @@ body {
                             border-radius: 100%;
                             margin-left: 8rem;
                             background-color: #0055ff;
+                            color: #ffffff;
+                            font-size: small;
                             i {
                                 color: white;
                                 font-size: small;
@@ -153,8 +164,76 @@ body {
                         color: $black;
                         font-weight: 600;
                         font-size: medium;
+                        &:hover {
+                            color: $black;
+                            font-weight: 600;
+                            font-size: medium;
+                        }
                     }
                 }
+            }
+        }
+        .nav_massage {
+            width: 100%;
+            height: auto;
+            .massage_tool {
+                display: flex;
+                justify-content: flex-start;
+                .head_text {
+                    @include headText();
+                    font-size: 0.9rem;
+                }
+                .tool {
+                    margin-left: 6.8rem;
+                    i {
+                        cursor: pointer;
+                        &:hover {
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+            .massage_card {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background-color: #ffffff;
+                padding: 10px 20px 5px 20px;
+                .massage {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 00.5em;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 100%;
+                        border: 1px solid $textColor;
+                        text-align: start;
+                    }
+                    i {
+                        margin-left: 1.2em;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-size: small;
+                        font-weight: 300;
+                        color: $black;
+                    }
+                    .notif_massage {
+                        width: 17px;
+                        height: 17px;
+                        border-radius: 100%;
+                        background-color:rgb(137, 137, 137) ;
+                        display: flex;
+                        float: right;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 10px;
+                        color: #ffffff; 
+                        margin-left: auto;      
+                    }
+                }
+            }
+            @media screen and(max-width:560px) {
+                margin-top: 1rem;
             }
         }
     }

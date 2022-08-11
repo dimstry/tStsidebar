@@ -83,10 +83,10 @@ body .nav_section .nav_main h6 {
 }
 body .nav_section .nav_menu {
   width: 100%;
-  height: 45vh;
+  height: 36vh;
   margin-top: 0.5em;
 }
-body .nav_section .nav_menu .menu {
+body .nav_section .nav_menu .head_text {
   color: rgb(114, 114, 114);
   font-weight: 300;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -98,6 +98,7 @@ body .nav_section .nav_menu .menu_list {
   height: 100%;
   list-style-type: none;
   padding-left: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body .nav_section .nav_menu .menu_list .respon {
   display: flex;
@@ -136,6 +137,8 @@ body .nav_section .nav_menu .menu_list .menu_item .menu_link .notif {
   border-radius: 100%;
   margin-left: 8rem;
   background-color: #0055ff;
+  color: #ffffff;
+  font-size: small;
 }
 body .nav_section .nav_menu .menu_list .menu_item .menu_link .notif i {
   color: white;
@@ -149,4 +152,78 @@ body .nav_section .nav_menu .menu_list .menu_item .active {
   color: rgb(35, 34, 34);
   font-weight: 600;
   font-size: medium;
+}
+body .nav_section .nav_menu .menu_list .menu_item .active:hover {
+  color: rgb(35, 34, 34);
+  font-weight: 600;
+  font-size: medium;
+}
+body .nav_section .nav_massage {
+  width: 100%;
+  height: auto;
+}
+body .nav_section .nav_massage .massage_tool {
+  display: flex;
+  justify-content: flex-start;
+}
+body .nav_section .nav_massage .massage_tool .head_text {
+  color: rgb(114, 114, 114);
+  font-weight: 300;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+body .nav_section .nav_massage .massage_tool .tool {
+  margin-left: 6.8rem;
+}
+body .nav_section .nav_massage .massage_tool .tool i {
+  cursor: pointer;
+}
+body .nav_section .nav_massage .massage_tool .tool i:hover {
+  font-size: large;
+}
+body .nav_section .nav_massage .massage_card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px 20px 5px 20px;
+}
+body .nav_section .nav_massage .massage_card .massage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+body .nav_section .nav_massage .massage_card .massage img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid rgb(114, 114, 114);
+  text-align: start;
+}
+body .nav_section .nav_massage .massage_card .massage i {
+  margin-left: 1.2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: small;
+  font-weight: 300;
+  color: rgb(35, 34, 34);
+}
+body .nav_section .nav_massage .massage_card .massage .notif_massage {
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  background-color: rgb(137, 137, 137);
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #ffffff;
+  margin-left: auto;
+}
+@media screen and (max-width: 560px) {
+  body .nav_section .nav_massage {
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */
