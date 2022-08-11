@@ -87,7 +87,7 @@ body .nav_section .nav_menu {
   margin-top: 0.5em;
 }
 body .nav_section .nav_menu .menu {
-  color: rgb(99, 99, 99);
+  color: rgb(114, 114, 114);
   font-weight: 300;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   cursor: pointer;
@@ -106,10 +106,11 @@ body .nav_section .nav_menu .menu_list .respon {
 body .nav_section .nav_menu .menu_list .menu_item {
   margin-top: 0.5em;
   height: 2rem;
+  transition: font 0.2s ease;
 }
 body .nav_section .nav_menu .menu_list .menu_item .menu_link {
   text-decoration: none;
-  color: rgb(99, 99, 99);
+  color: rgb(114, 114, 114);
   height: 100%;
   display: flex;
   align-items: center;
@@ -140,8 +141,12 @@ body .nav_section .nav_menu .menu_list .menu_item .menu_link .notif i {
   color: white;
   font-size: small;
 }
+body .nav_section .nav_menu .menu_list .menu_item .menu_link:hover {
+  color: rgb(81, 80, 80);
+  font-weight: 500;
+}
 body .nav_section .nav_menu .menu_list .menu_item .active {
-  color: rgb(0, 0, 0);
-  font-weight: 700;
+  color: rgb(35, 34, 34);
+  font-weight: 600;
   font-size: medium;
 }/*# sourceMappingURL=main.css.map */

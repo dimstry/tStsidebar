@@ -3,7 +3,7 @@
 $red :#ff0000;
 $yellow:#fbff00;
 $green:#2de200;
-$textColor: rgb(99, 99, 99);
+$textColor: rgb(114, 114, 114);
 $black: rgb(35, 34, 34);
 
 
@@ -117,6 +117,7 @@ body {
                 .menu_item {
                     margin-top: 0.5em;
                     height: 2rem;
+                    transition: font .2s ease;
                     .menu_link {
                         text-decoration: none;
                         color: $textColor;
@@ -143,10 +144,14 @@ body {
                                 font-size: small;
                             }
                         }
+                        &:hover {
+                            color:rgb(81, 80, 80) ;
+                            font-weight: 500;
+                        }
                     }
                     .active {
                         color: $black;
-                        font-weight: 800;
+                        font-weight: 600;
                         font-size: medium;
                     }
                 }

@@ -6,6 +6,7 @@ const headerRight = document.querySelector(".header_right");
 const navInfo = document.querySelectorAll(".nav_info")
 const menu = document.querySelector(".menu");
 const menuItem = document.querySelectorAll(".menu_item");
+const menuLink = document.querySelectorAll(".menu_link")
 const notif = document.querySelector(".notif");
 
 // function display & text
@@ -39,3 +40,13 @@ roundBtn.addEventListener('click', () => {
     forLoop("none", "respon");
     forDisplay("center", "none");
 })
+
+
+// active function
+for (let i = 0; i < menuLink.length; i++) {
+    menuLink[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
