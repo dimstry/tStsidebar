@@ -24,8 +24,8 @@ $btnColor: rgba(255, 255, 255, 0.47);
 }
 
 @mixin roundBtn {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     background-color: $btnColor;
     border-radius: 100%;
     display: flex;
@@ -63,6 +63,9 @@ body {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            @media only screen and(max-width:560px) {
+                height: 2.5rem;
+            }
             .header_left{
                 width: 50%;
                 display: flex;
@@ -98,10 +101,11 @@ body {
             justify-content: start;
             align-items: center;
             img {
-                width: 63px;
-                height: 63px;
+                width: 3.75rem;
+                height: 3.75rem;
                 border-radius: 100%;
                 align-items: center;
+                
             }
             h6 {
                 padding-left: 1rem;
@@ -129,6 +133,9 @@ body {
                     margin-top: 0.5em;
                     height: 2rem;
                     transition: font .2s ease;
+                    @media only screen and(max-width:380px) {
+                        margin-top: 0.2em;
+                    }
                     .menu_link {
                         text-decoration: none;
                         color: $textColor;
@@ -136,6 +143,7 @@ body {
                         .icon {
                             @include myDisplay();
                             justify-content: center;
+                            transition: text-align .2s ease;
                         }
                         .nav_info {
                             @include myDisplay();
@@ -233,6 +241,11 @@ body {
                         color: #ffffff; 
                         margin-left: auto;      
                     }
+                    @media only screen and(max-width:560px) {
+                        &:nth-child(4) {
+                            display: none;
+                        }
+                    }
                 }
             }
             @media screen and(max-width:560px) {
@@ -258,12 +271,14 @@ body {
                         font-weight: 500;
                         font-size: medium;
                         color: $black;
+                        cursor: pointer;
                     }
                     .me_position {
                         margin: 0;
                         font-weight: 400;
                         font-size: medium;
                         color: $btnColor;
+                        cursor: pointer;
                     }
                 }
             }

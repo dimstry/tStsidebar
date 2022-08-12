@@ -16,12 +16,14 @@ const me = document.querySelector(".me");
 const back = document.querySelector(".back");
 const backMassage = document.querySelector("#back_massage");
 const nextMassage = document.querySelector("#next_massage");
+const logoMain = document.querySelector(".logo_main");
 
 // function display & text
 const forDisplay = (text, display) => {
     headerRight.style.display =display;
     tool.style.display =display;
     me.style.display =display;
+    logoMain.style.display = display;
 }
 
 // function loop menu
