@@ -9,7 +9,6 @@ a sidebar that is made according to the design
 * Ya beda jauh sih emang tapi yaudah lah ya
 * Hanya Latihan untuk SCSS
 * javascript nya rada acak acak 🥲
-* -Mobile view (gak mines mines amat sihh)
 * Just For Fun 😂
 ## Result?
 <img src="hasil.png" width="300px" />
